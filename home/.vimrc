@@ -1,8 +1,10 @@
 " UI "
 set number
+syntax enable
 
 " Set default encoding to UTF-8
-set encoding=utf8
+scriptencoding utf-8
+set encoding=utf-8
 
 " Tabs and Inserts "
 set expandtab
