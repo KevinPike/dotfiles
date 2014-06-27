@@ -82,10 +82,10 @@ nnoremap <C-l> <C-w>l
 
 " UI "
 set number
+set ruler
 syntax enable
 
 " Set default encoding to UTF-8
-scriptencoding utf-8
 set encoding=utf-8
 
 " Tabs and Inserts "
