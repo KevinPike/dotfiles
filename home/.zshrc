@@ -7,7 +7,7 @@ export ZSH=$HOME/.oh-my-zsh
 # time that oh-my-zsh is loaded.
 ZSH_THEME="robbyrussell"
 
-plugins=(git sublime tmux jump bower go node npm pip python virtualenvwrapper brew knife)
+plugins=(git sublime tmux jump bower go node npm pip python virtualenvwrapper brew knife docker)
 
 export PATH="/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin"
 export PATH=$PATH:/usr/local/go/bin/
