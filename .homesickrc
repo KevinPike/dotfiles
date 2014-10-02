@@ -1,5 +1,9 @@
-# Configure Vundle
-sh "git clone https://github.com/gmarik/Vundle.vim.git ~/.vim/bundle/Vundle.vim"
-sh "vim -c BundleInstall"
+require 'rake'
 
-curl -L http://install.ohmyz.sh | sh
+Object.send(:include, Rake::DSL)
+
+# Configure Vundle
+sh "git clone https://github.com/gmarik/Vundle.vim.git ~/.vim/bundle/Vundle.vim" unless Dir.exists?(File.expand_path('~/.vim/bundle/Vundle.vim'))
+sh "vim +PluginInstall +qall"
+
+sh "curl -L http://install.ohmyz.sh | sh"
