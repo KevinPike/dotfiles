@@ -1,0 +1,8 @@
+[user]
+    name = Kevin Pike
+    email = kevin.e.pike@gmail.com
+[color]
+    ui = true
+[alias]
+    pr = pull --rebase
+    st = status
