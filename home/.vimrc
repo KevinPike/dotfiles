@@ -14,4 +14,4 @@ set smarttab
 
 set list listchars=tab:>-,trail:›,extends:…
 
-colorscheme molokai
+colorscheme badwolf
