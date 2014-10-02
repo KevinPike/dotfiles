@@ -6,3 +6,14 @@
 [alias]
     pr = pull --rebase
     st = status
+    ls = log --pretty=format:"%C(yellow)%h%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate
+    lt = log --graph --oneline --decorate --all
+    la = "!git config -l | grep alias | cut -c 7-"
+    cp = cherry-pick
+    st = status -s
+    cl = clone
+    ci = commit
+    co = checkout
+    br = branch 
+    diff = diff --word-diff
+    dc = diff --cached
