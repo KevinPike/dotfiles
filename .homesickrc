@@ -6,4 +6,4 @@ Object.send(:include, Rake::DSL)
 sh "git clone https://github.com/gmarik/Vundle.vim.git ~/.vim/bundle/Vundle.vim" unless Dir.exists?(File.expand_path('~/.vim/bundle/Vundle.vim'))
 sh "vim +PluginInstall +qall"
 
-sh "curl -L http://install.ohmyz.sh | sh"
+sh "curl -L http://install.ohmyz.sh | sh" unless File.exists?(File.expand_path('/bin/zsh'))
