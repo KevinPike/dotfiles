@@ -13,6 +13,7 @@ call vundle#begin()
 Plugin 'gmarik/Vundle.vim'
 
 Plugin 'ekalinin/Dockerfile.vim'
+Plugin 'elzr/vim-json'
 " The following are examples of different formats supported.
 " Keep Plugin commands between vundle#begin/end.
 " plugin on GitHub repo
@@ -29,6 +30,7 @@ Plugin 'rstacruz/sparkup', {'rtp': 'vim/'}
 " Avoid a name conflict with L9
 " Plugin 'user/L9', {'name': 'newL9'}
 
+Plugin 'fatih/vim-go'
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on    " required
@@ -40,9 +42,15 @@ map <C-n> :NERDTreeToggle<CR>
 " Automatically open NERDTree when vim has no args
 autocmd StdinReadPre * let s:std_in=1
 autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
+let NERDTreeShowHidden=1
+map  <C-l> :tabn<CR>
+map  <C-h> :tabp<CR>
+map  <C-n> :tabnew<CR>
+" End Nerdtree
 Bundle 'kien/ctrlp.vim'
 let g:ctrlp_map = '<c-p>'
 Bundle 'klen/python-mode'
+
 "Custom keymaps
 "map <silent> <LocalLeader>nt :NERDTreeToggle<CR>
 "
@@ -53,7 +61,7 @@ Bundle 'klen/python-mode'
 ""Preferences
 set hlsearch
 set number
-set textwidth=0 nosmartindent tabstop=4 shiftwidth=2 softtabstop=2 expandtab
+set textwidth=0 nosmartindent tabstop=2 shiftwidth=2 softtabstop=2 expandtab
 let &t_Co=256
 set backspace=2
 set hidden
@@ -74,11 +82,6 @@ map <silent> <LocalLeader>ws :highlight clear ExtraWhitespace<CR>
 "
 let g:ctrlp_show_hidden = 1
 "
-" " Sane window navigation
-nnoremap <C-h> <C-w>h
-nnoremap <C-j> <C-w>j
-nnoremap <C-k> <C-w>k
-nnoremap <C-l> <C-w>l
 
 " UI "
 set number
@@ -87,12 +90,6 @@ syntax enable
 
 " Set default encoding to UTF-8
 set encoding=utf-8
-
-" Tabs and Inserts "
-set expandtab
-set shiftwidth=4
-set tabstop=4
-set smarttab
 
 set list listchars=tab:>-,trail:›,extends:…
 
